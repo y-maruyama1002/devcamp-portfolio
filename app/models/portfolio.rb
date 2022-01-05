@@ -5,4 +5,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: "Angular")
   end
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: "Ruby on Rails") }
+  after_initialize :set_defaults
+
+  def set_defaults
+    self.main_image ||= "https://placehold.jp/600x400.png"
+    self.thumb_image ||= "https://placehold.jp/350x250.png"
+  end
 end
