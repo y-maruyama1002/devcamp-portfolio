@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    YoshiDevcampViewTool::Renderer.copyright("Jordan Hudgens", "All rights reserved")
+    YoshiDevcampViewTool::Renderer.copyright("Yoshihiro", "All rights reserved")
   end
 end
