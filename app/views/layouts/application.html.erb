@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,13 +13,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/nav", location: "top" %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= copyright_generator %>
-    <%= source_helper("applicatioin") %>
+  <body class="h-100">
+    <div class="d-flex h-100 text-center text-white bg-dark">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav"%>
+      <%= yield %>
+      <%= render 'shared/application_footer' %>
+      <%= source_helper("application") %>
+      </div>
+    </div>
   </body>
 </html>
