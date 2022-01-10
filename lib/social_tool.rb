@@ -10,6 +10,6 @@ module SocialTool
     # client.search("#rails", result_types: 'recent').take(6).collect do |tweet|
     #   "#{tweet.user.screen_name}: #{tweet.text}"
     # end
-    ["tweet", "tentative"]
+    ["tweet https://blog.palettecms.jp/article/20103", "tentative https://rubular.com/r/mA36VaphNA"]
   end
 end
