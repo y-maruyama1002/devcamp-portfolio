@@ -1,3 +1,5 @@
+User.create!(email: "user@test.com", name: "yoshi", password: "password", roles: "site_admin")
+
 3.times do |i|
   Topic.create(title: "Topic #{i}")
 end
@@ -26,17 +28,13 @@ puts "5 skills created"
     title: "Porfolio title #{i}",
     subtitle: "Ruby on Rails",
     body: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, ",
-    main_image: "https://placehold.jp/600x400.png",
-    thumb_image: "https://placehold.jp/350x250.png",
   )
 end
 
 Portfolio.create!(
   title: 'Portfolio title 10',
   subtitle: "Angular",
-  body: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, ",
-  main_image: "https://placehold.jp/600x400.png",
-  thumb_image: "https://placehold.jp/350x250.png",
+  body: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, "
 )
 
 puts "9 portfolios created"

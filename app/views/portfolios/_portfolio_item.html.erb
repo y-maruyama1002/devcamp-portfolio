@@ -1,6 +1,6 @@
 <div class="col sortable-card" data-id="<%= portfolio_item.id%>">
   <div class="card shadow-sm">
-    <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
+    <%= image_tag portfolio_item.thumb_image.url if !portfolio_item.thumb_image.url.nil? %>
     <div class="card-body">
       <title><%= portfolio_item.title %></title>
       <p class="card-text">
