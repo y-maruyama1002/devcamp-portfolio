@@ -54,3 +54,4 @@ gem 'yoshi_devcamp_view_tool', git: 'https://github.com/y-maruyama1002/yoshi_dev
 gem 'petergate', '~> 3.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
