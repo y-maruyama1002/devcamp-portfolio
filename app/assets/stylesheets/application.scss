@@ -25,6 +25,12 @@ body {
   max-width: 42em;
 }
 
+@media (min-width: 62em) {
+  .cover-container {
+    max-width: 65em;
+  }
+}
+
 /*
  * Header
  */
@@ -94,4 +100,17 @@ body {
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a {
+  color: green;
+}
+
+.tech-news > .card {
+  padding: 30px;
 }
