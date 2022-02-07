@@ -12,7 +12,13 @@
 
   <div class="mb-3">
     <%= form.label :topic_id, class: "form-label"%>
-    <%= form.text_field :topic_id, class: "form-control" %>
+    <%= form.collection_select(:topic_id, Topic.all, :id, :title,
+                              {
+                                selected: blog.topic.id, include_blank: true
+                              },
+                              class: "form-select"
+                              )
+    %>
   </div>
 
   <div class="mb-3">
