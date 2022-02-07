@@ -12,5 +12,5 @@
     <% end %>
     <%= link_to 'Back', blogs_path %>
   </p>
-  <p><%= @blog.body %></p>
+  <p><%= markdown @blog.body %></p>
 </article>
