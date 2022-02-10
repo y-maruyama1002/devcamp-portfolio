@@ -2,7 +2,12 @@
   From the Firehose
 </h3>
 <nav class="blog-pagination" aria-label="Pagination">
-  <%= link_to 'New Blog', new_blog_path, class: "btn btn-outline-primary"  if logged_in?(:site_admin) %>
+  <span>
+    <%= link_to 'New Blog', new_blog_path, class: "btn btn-outline-primary"  if logged_in?(:site_admin) %>
+  </span>
+  <span>
+    <%= link_to 'Topics', topics_path, class: "btn btn-outline-secondary"  if logged_in?(:site_admin) %>
+  </span>
 </nav>
 <%= paginate @blogs %>
 <%= render @blogs %>

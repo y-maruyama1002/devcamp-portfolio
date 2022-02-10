@@ -3,7 +3,7 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   belongs_to :topic
 
@@ -13,5 +13,9 @@ class Blog < ApplicationRecord
 
   def self.feature_blog
     limit(2)
+  end
+
+  def self.recent
+    order("created_at DESC")
   end
 end

@@ -1,5 +1,18 @@
 <article class="blog-post">
   <h2 class="blog-post-title"><%= @blog.title %></h2>
+  <nav aria-label="パンくずリスト">
+    <ol class="breadcrumb mb-1">
+      <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+      <li class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic) %></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= link_to @blog.title, root_path %></li>
+    </ol>
+    <span>
+      <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+    </span>
+    <span>
+      <%= link_to 'trash', @blog, method: :delete, data: { confirm: "Are you sure?" } if logged_in?(:site_admin) %>
+    </span>
+  </nav>
   <p class="blog-post-meta">Piblished <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p>
   <p class="blog-post-meta">
     <% if logged_in?(:site_admin) %>
@@ -9,5 +22,5 @@
     <% end %>
     <%= link_to 'Back', blogs_path %>
   </p>
-  <p><%= @blog.body %></p>
+  <p><%= markdown @blog.body %></p>
 </article>
